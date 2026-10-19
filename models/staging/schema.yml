@@ -25,3 +25,15 @@ seeds:
               arguments:
                 to: ref('products')
                 field: product_id
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: total_orders
+        data_tests:
+          - not_null
+      - name: total_revenue
+        data_tests:
+          - not_null
